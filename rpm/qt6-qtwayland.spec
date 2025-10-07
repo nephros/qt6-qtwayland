@@ -1,5 +1,7 @@
 %global  qt_version 6.8.3
 
+%bcond_with vulkan
+
 Summary: Qt6 - Wayland platform support and QtCompositor module
 Name:    qt6-qtwayland
 Version: 6.8.3
@@ -31,6 +33,9 @@ BuildRequires: pkgconfig(wayland-cursor)
 BuildRequires: pkgconfig(wayland-egl)
 BuildRequires: pkgconfig(egl)
 BuildRequires: pkgconfig(libudev)
+%if %{with vulkan}
+BuildRequires: vulkan-headers
+%endif
 
 %description
 %{summary}.
