@@ -55,7 +55,11 @@ Requires: qt6-qtdeclarative-devel%{?_isa}
 %build
 %cmake_qt6 \
   -DQT_BUILD_EXAMPLES:BOOL=OFF \
-  -DQT_INSTALL_EXAMPLES_SOURCES=OFF
+  -DQT_INSTALL_EXAMPLES_SOURCES=OFF \
+%if %{with vulkan}
+  -DQT_FEATURE_vulkan=ON \
+%endif
+  %{nil}
 
 %cmake_build
 
