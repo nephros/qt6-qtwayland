@@ -1,10 +1,10 @@
-%global  qt_version 6.8.3
+%global qt_version 6.8.4
 
 %bcond_with vulkan
 
 Summary: Qt6 - Wayland platform support and QtCompositor module
 Name:    qt6-qtwayland
-Version: 6.8.3
+Version: 6.8.4
 Release: 0%{?dist}
 
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
